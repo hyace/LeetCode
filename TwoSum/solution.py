@@ -9,14 +9,6 @@
  */
 class Solution:
     def twosum(self, num, target):
-
-        """
-        :rtype : object
-        :param num:
-        :param target:
-        :return:
-        """
-
         n = len(num)
         mapping = {}
         for i in range(n):

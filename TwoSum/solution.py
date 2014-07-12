@@ -8,7 +8,7 @@
  * Url:https://oj.leetcode.com/problems/two-sum/
  */
 class Solution:
-    def twosum(self, num, target):
+    def twoSum(self, num, target):
         n = len(num)
         mapping = {}
         for i in range(n):

@@ -16,7 +16,7 @@ class Solution:
         result = [0, 0]
         for i in range(n):
             t = target - num[i]
-            if t in mapping:
+            if (t in mapping) and mapping[t] != i:
                 result[0] = min(i + 1, mapping[t] + 1)
                 result[1] = max(i + 1, mapping[t] + 1)
         return result

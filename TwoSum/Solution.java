@@ -14,12 +14,12 @@ public class Solution {
         int[] result = null;
         for (int i = 0; i < N; i++)
             hm.put(num[i], i);
-        for (int i : num) {
-            int t = target - i;
-            if (hm.containsKey(t)) {
+        for (int i = 0; i < N; i++) {
+            int t = target - num[i];
+            if (hm.containsKey(t) && hm.get(t) != i) {
                 result = new int[2];
-                result[0] = Math.min(t, hm.get(t)) + 1;
-                result[1] = Math.max(t, hm.get(t)) + 1;
+                result[0] = Math.min(i, hm.get(t)) + 1;
+                result[1] = Math.max(i, hm.get(t)) + 1;
             }
         }
         return result;

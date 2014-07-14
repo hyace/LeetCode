@@ -1,4 +1,4 @@
-/*
+/**
  * Problem:Remove Duplicates from Sorted Array
  * Given a sorted array, remove the duplicates 
  * in place such that each element appear only 
@@ -13,12 +13,10 @@
  * date:May 24, 2014
  *
  */
-public class RemoveDuplicates{
-	public static void main(String[] args){
-		
-	}
+public class Solution{
 	public static int removeDuplicates(int[] arr){
 		int n = arr.length;
+		if(n==0) return 0;
 		int point=0;
 		for(int i=1;i<n;i++){
 			if(arr[point]!=arr[i])

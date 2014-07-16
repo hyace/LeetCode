@@ -31,4 +31,25 @@ public class Solution {
         }
         return -1;
     }
+	// 一下是解决II的search，running time 是O(n),也可以解决I，oj通过，但是效率略低
+    public int searchII(int[] A, int target) {
+        int n = A.length;
+        int p = n - 1;
+        for (int i = 1; i < n; i++, p--)
+            if (A[i] < A[i - 1])
+                break;
+        int left = 0, right = n - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int t = (mid - p + n) % n;
+            if (A[t] == target)
+                return t;
+            if (A[t] < target)
+                left = mid + 1;
+            else
+                right = mid - 1;
+        }
+        return -1;
+    }
+	
 }

@@ -10,7 +10,7 @@ package leetcode.searchInRotatedSortedArrayII;
  * 
  */
 public class Solution {
-    public static int search(int[] A, int target) {
+    public boolean search(int[] A, int target) {
         int n = A.length;
         int p = n - 1;
         for (int i = 1; i < n; i++, p--)
@@ -21,12 +21,12 @@ public class Solution {
             int mid = (left + right) / 2;
             int t = (mid - p + n) % n;
             if (A[t] == target)
-                return t;
+                return true;
             if (A[t] < target)
                 left = mid + 1;
             else
                 right = mid - 1;
         }
-        return -1;
+        return false;
     }
 }

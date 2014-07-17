@@ -1,11 +1,13 @@
 package leetcode.searchInRotatedSortedArray;
 
 /**
- * Problem: Search in Rotated Sorted Array Description: Suppose a sorted array
- * is rotated at some pivot unknown to you beforehand. (i.e., 0 1 2 4 5 6 7
- * might become 4 5 6 7 0 1 2). You are given a target value to search. If found
- * in the array return its index, otherwise return -1. You may assume no
- * duplicate exists in the array
+ * Problem: Search in Rotated Sorted Array 
+ * Description: Suppose a sorted array is rotated at 
+ * some pivot unknown to you beforehand. (i.e., 0 
+ * 1 2 4 5 6 7 might become 4 5 6 7 0 1 2). You are 
+ * given a target value to search. If found in the 
+ * array return its index, otherwise return -1. You 
+ * may assume no duplicate exists in the array
  * 
  * @author Chyace
  * 
@@ -17,7 +19,7 @@ public class Solution {
             int mid = (left + right) / 2;
             if (target == A[mid])
                 return mid;
-            if (A[mid] > A[left]) {
+            if (A[mid] >= A[left]) {
                 if (target < A[mid] && target >= A[left])
                     right = mid - 1;
                 else
@@ -31,7 +33,7 @@ public class Solution {
         }
         return -1;
     }
-	// Ò»ÏÂÊÇ½â¾öIIµÄsearch£¬running time ÊÇO(n),Ò²¿ÉÒÔ½â¾öI£¬ojÍ¨¹ı£¬µ«ÊÇĞ§ÂÊÂÔµÍ
+    // ä»¥ä¸‹æ˜¯è§£å†³IIçš„searchï¼Œrunning time æ˜¯O(n),ä¹Ÿå¯ä»¥è§£å†³Iï¼Œojé€šè¿‡ï¼Œä½†æ˜¯æ•ˆç‡ç•¥ä½
     public int searchII(int[] A, int target) {
         int n = A.length;
         int p = n - 1;
@@ -51,5 +53,4 @@ public class Solution {
         }
         return -1;
     }
-	
 }

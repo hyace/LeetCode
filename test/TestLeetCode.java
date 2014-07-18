@@ -12,13 +12,16 @@ package com.hyace.test;
 
 //import leetcode.searchInRotatedSortedArrayII.Solution;
 
-import leetcode.medianOfTwoSortedArrays.Solution;
+//import leetcode.medianOfTwoSortedArrays.Solution;
+
+import leetcode.longestConsecutiveSequence.Solution;
 
 import org.junit.Test;
 
 public class TestLeetCode {
     @Test
     public void test() {
+        Solution s = new Solution();
         // SimpleNumber
         // int[] a = { 2, 4, 2, 4, 1, 6, 1, 7, 7, 3, 3, 9, 9, 44, 44, 6, 11, 5,
         // 5 };
@@ -52,10 +55,13 @@ public class TestLeetCode {
         // System.out.println(Solution.search(a, 18));
 
         // Median of Two Sorted Arrays
-        int[] A = new int[] { 1, 15 };
-        int[] B = new int[] { 1, 2, 3, 4 };
-        Solution s = new Solution();
-        System.out.println(s.findMedianSortedArrays(A, B));
+        // int[] A = new int[] { 1, 15 };
+        // int[] B = new int[] { 1, 2, 3, 4 };
+        // System.out.println(s.findMedianSortedArrays(A, B));
+
+        // Longest Consecutive Sequence
+        int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17, 0 };
+        System.out.println(s.longestConsecutive(a));
     }
 
     private void printArray(int[] a) {

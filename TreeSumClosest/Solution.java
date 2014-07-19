@@ -26,7 +26,7 @@ public class Solution {
                 if (sum == target) return target;
                 if (sum > target) r--;
                 else l++;
-                //这里如果不判断MAX，abs会计算出一个MIN
+                //这里如果不判断MAX，abs会计算出一个近似MIN
                 if (result == Integer.MAX_VALUE || Math.abs(sum - target) < Math.abs(result - target))
                     result = sum;
             }

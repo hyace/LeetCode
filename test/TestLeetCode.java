@@ -14,7 +14,13 @@ package com.hyace.test;
 
 //import leetcode.medianOfTwoSortedArrays.Solution;
 
-import leetcode.longestConsecutiveSequence.Solution;
+//import leetcode.longestConsecutiveSequence.Solution;
+
+//import leetcode.mergeSortedArrays.Solution;
+
+import java.util.List;
+
+import leetcode.threeSum.Solution;
 
 import org.junit.Test;
 
@@ -60,8 +66,26 @@ public class TestLeetCode {
         // System.out.println(s.findMedianSortedArrays(A, B));
 
         // Longest Consecutive Sequence
-        int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17, 0 };
-        System.out.println(s.longestConsecutive(a));
+        // int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17, 0 };
+        // System.out.println(s.longestConsecutive(a));
+
+        // Merge Sorted Arrays
+        // int[] a = { 0, 1, 2, 3, 4, 6, 8, 9, 0, 0, 0, 0, 0, 0 };
+        // int[] b = { 2, 4, 7, 8, 13, 20 };
+        // s.merge(a, 8, b, 6);
+        // printArray(a);
+
+        // 3 Sum
+        int[] a = { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1, -3 };
+        List<List<Integer>> res = s.threeSum(a);
+        for (List<Integer> l : res) {
+            System.out.print("[ ");
+            for (Integer i : l) {
+                System.out.print(i + " ");
+            }
+            System.out.print("]  ");
+
+        }
     }
 
     private void printArray(int[] a) {

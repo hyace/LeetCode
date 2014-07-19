@@ -42,9 +42,9 @@ public class Solution {
                     result.add(triplet);
                     l++;
                     r--;
-                    while (num[l] == num[l - 1])
+                    while (l < r && num[l] == num[l - 1])
                         l++;
-                    while (num[r] == num[r + 1])
+                    while (l < r && num[r] == num[r + 1])
                         r--;
                 }
             }

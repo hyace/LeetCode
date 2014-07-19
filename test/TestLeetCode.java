@@ -20,7 +20,9 @@ package com.hyace.test;
 
 import java.util.List;
 
-import leetcode.threeSum.Solution;
+//import leetcode.threeSum.Solution;
+
+import leetcode.threeSumClosest.Solution;
 
 import org.junit.Test;
 
@@ -76,16 +78,23 @@ public class TestLeetCode {
         // printArray(a);
 
         // 3 Sum
-        int[] a = { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1, -3 };
-        List<List<Integer>> res = s.threeSum(a);
-        for (List<Integer> l : res) {
-            System.out.print("[ ");
-            for (Integer i : l) {
-                System.out.print(i + " ");
-            }
-            System.out.print("]  ");
+        // int[] a = { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1, -3 };
+        // int[] a = { 0, 0, 0 };
+        // List<List<Integer>> res = s.threeSum(a);
+        // for (List<Integer> l : res) {
+        // System.out.print("[ ");
+        // for (Integer i : l) {
+        // System.out.print(i + " ");
+        // }
+        // System.out.print("]  ");
+        //
+        // }
 
-        }
+        // 3 Sum Closest
+        int[] a = { -3, -2, -5, 3, -4 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5,
+                                        // 0, 1,
+                                        // -3 };
+        System.out.println(s.threeSumClosest(a, -1));
     }
 
     private void printArray(int[] a) {

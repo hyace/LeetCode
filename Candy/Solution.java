@@ -3,21 +3,21 @@
  * 
  * http://oj.leetcode.com/problems/candy/
  *
- * There are N children standing in a line,
- * Each child is assigned a rating value.You 
- * are giving candies to these children subjected 
- * to the following requirements:
- *  Each child must have atleast one candy.
- *  Children with a higher rating get more candies 
- * than their neighbors.What is the minimum candies
- * you must give?
+ * There are N children standing in a line, Each child 
+ * is assigned a rating value.You are giving candies 
+ * to these children subjected to the following requir
+ * ements:
+ *		Each child must have atleast one candy.
+ *		Children with a higher rating get more candies 
+ * than their neighbors.
+ * What is the minimum candies you must give?
  *
  * author Hyace
  * date:May 6, 2014
  *
  *
  */
-public class Candy01 {
+public class Solution {
 
 	public int candy(int[] ratings) {
 		int sum = 0;

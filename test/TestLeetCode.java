@@ -22,7 +22,9 @@ import java.util.List;
 
 //import leetcode.threeSum.Solution;
 
-import leetcode.threeSumClosest.Solution;
+//import leetcode.threeSumClosest.Solution;
+
+import leetcode.fourSum.Solution;
 
 import org.junit.Test;
 
@@ -91,10 +93,24 @@ public class TestLeetCode {
         // }
 
         // 3 Sum Closest
-        int[] a = { -3, -2, -5, 3, -4 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5,
-                                        // 0, 1,
-                                        // -3 };
-        System.out.println(s.threeSumClosest(a, -1));
+        // int[] a = { -3, -2, -5, 3, -4 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4,
+        // -5,
+        // // 0, 1,
+        // // -3 };
+        // System.out.println(s.threeSumClosest(a, -1));
+
+        // 4 Sum
+        int[] a = { 0, 0, 0, 0 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1, -3
+                                 // };
+        List<List<Integer>> result = s.fourSum(a, 0);
+        for (List<Integer> q : result) {
+            System.out.print("[ ");
+            for (Integer i : q) {
+                System.out.print(i + " ");
+            }
+            System.out.print("]  ");
+
+        }
     }
 
     private void printArray(int[] a) {

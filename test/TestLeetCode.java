@@ -18,13 +18,15 @@ package com.hyace.test;
 
 //import leetcode.mergeSortedArrays.Solution;
 
-import java.util.List;
-
 //import leetcode.threeSum.Solution;
 
 //import leetcode.threeSumClosest.Solution;
 
-import leetcode.fourSum.Solution;
+//import leetcode.fourSum.Solution;
+
+//import leetcode.removeElement.Solution;
+
+import leetcode.nextPermutation.Solution;
 
 import org.junit.Test;
 
@@ -100,17 +102,28 @@ public class TestLeetCode {
         // System.out.println(s.threeSumClosest(a, -1));
 
         // 4 Sum
-        int[] a = { 0, 0, 0, 0 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1, -3
-                                 // };
-        List<List<Integer>> result = s.fourSum(a, 0);
-        for (List<Integer> q : result) {
-            System.out.print("[ ");
-            for (Integer i : q) {
-                System.out.print(i + " ");
-            }
-            System.out.print("]  ");
+        // int[] a = { 0, 0, 0, 0 };// { 0, 0, 8, 2, -1, 1, -10, 3, 4, -5, 0, 1,
+        // -3
+        // // };
+        // List<List<Integer>> result = s.fourSum(a, 0);
+        // for (List<Integer> q : result) {
+        // System.out.print("[ ");
+        // for (Integer i : q) {
+        // System.out.print(i + " ");
+        // }
+        // System.out.print("]  ");
+        //
+        // }
 
-        }
+        // Remove Element
+        // int[] a = { 1, 3, 5, 7, 9, 16, 18, 4, 6, 2, 3, 3, 3 };
+        // System.out.println(s.removeElement(a, 3));
+        // printArray(a);
+
+        // Next Permutation
+        int[] a = { 1, 1, 5 };
+        s.nextPermutation(a);
+        printArray(a);
     }
 
     private void printArray(int[] a) {

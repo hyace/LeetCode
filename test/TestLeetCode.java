@@ -1,5 +1,7 @@
 package com.hyace.test;
 
+import java.util.List;
+
 //import leetcode.searchInRotatedSortedArray.Solution;
 
 //import leetcode.removeDuplicatesFromSortedArrayII.Solution;
@@ -26,7 +28,11 @@ package com.hyace.test;
 
 //import leetcode.removeElement.Solution;
 
-import leetcode.nextPermutation.Solution;
+//import leetcode.nextPermutation.Solution;
+
+//import leetcode.pascalsTriangleII.Solution;
+
+import leetcode.permutationSequence.Solution;
 
 import org.junit.Test;
 
@@ -121,9 +127,18 @@ public class TestLeetCode {
         // printArray(a);
 
         // Next Permutation
-        int[] a = { 1, 1, 5 };
-        s.nextPermutation(a);
-        printArray(a);
+        // int[] a = { 1, 3, 2 };
+        // s.nextPermutation(a);
+        // printArray(a);
+
+        // Pascal's Triangle II
+        // List<Integer> list = s.getRowII(23);
+        // for (int i : list) {
+        // System.out.print(i + " ");
+        // }
+
+        // Permutation Sequence
+        System.out.println(s.getPermutation(5, 7));
     }
 
     private void printArray(int[] a) {

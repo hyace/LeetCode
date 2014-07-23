@@ -57,6 +57,7 @@ public class Solution {
             m *= i;
             sb.append(i);
         }
+        k--;
         while (n > 0) {
             m /= n;
             int r = k / m;

@@ -1,5 +1,9 @@
 package com.hyace.test;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 
 //import leetcode.searchInRotatedSortedArray.Solution;
@@ -36,9 +40,12 @@ import java.util.List;
 
 import leetcode.longestPalindromicSubstring.Solution;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestLeetCode {
+    String str;
+
     @Test
     public void test() {
         Solution s = new Solution();
@@ -141,8 +148,15 @@ public class TestLeetCode {
 
         // Permutation Sequence
         // System.out.println(s.getPermutationII(5, 7));
-        String str = "sosbppb";
+        // String str = "sosbppb";
         System.out.println(s.longestPalindrome(str));
+    }
+
+    @Before
+    public void prePro() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+        str = br.readLine();
+        br.close();
     }
 
     private void printArray(int[] a) {

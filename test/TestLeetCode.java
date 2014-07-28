@@ -32,7 +32,9 @@ import java.util.List;
 
 //import leetcode.pascalsTriangleII.Solution;
 
-import leetcode.permutationSequence.Solution;
+//import leetcode.permutationSequence.Solution;
+
+import leetcode.longestPalindromicSubstring.Solution;
 
 import org.junit.Test;
 
@@ -138,7 +140,9 @@ public class TestLeetCode {
         // }
 
         // Permutation Sequence
-        System.out.println(s.getPermutation(5, 7));
+        // System.out.println(s.getPermutationII(5, 7));
+        String str = "sosbppb";
+        System.out.println(s.longestPalindrome(str));
     }
 
     private void printArray(int[] a) {

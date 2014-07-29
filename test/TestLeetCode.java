@@ -40,7 +40,9 @@ package com.hyace.test;
 
 //import leetcode.reverseWordsInAString.Solution;
 
-import leetcode.validSudoku.Solution;
+//import leetcode.validSudoku.Solution;
+
+import leetcode.trappingRainWater.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -158,17 +160,23 @@ public class TestLeetCode {
         // System.out.println(s.reverseWords(str));
 
         // Valid Sudoku
-        char[][] board = { 
-                { '5', '3', '2', '4', '7', '.', '.', '.', '.' },
-                { '6', '.', '.', '1', '9', '5', '.', '.', '.' },
-                { '.', '9', '8', '.', '.', '.', '.', '6', '.' },
-                { '8', '.', '.', '.', '6', '.', '.', '.', '3' },
-                { '4', '.', '.', '8', '.', '3', '.', '.', '1' },
-                { '7', '.', '.', '.', '2', '.', '.', '.', '6' },
-                { '.', '6', '.', '.', '.', '.', '2', '8', '.' },
-                { '.', '.', '.', '4', '1', '9', '.', '.', '5' },
-                { '1', '.', '.', '.', '8', '.', '.', '7', '9' }, };
-        System.out.println(s.isValidSudoku(board));
+        /*
+         * char[][] board = {
+         * { '5', '3', '2', '4', '7', '.', '.', '.', '.' },
+         * { '6', '.', '.', '1', '9', '5', '.', '.', '.' },
+         * { '.', '9', '8', '.', '.', '.', '.', '6', '.' },
+         * { '8', '.', '.', '.', '6', '.', '.', '.', '3' },
+         * { '4', '.', '.', '8', '.', '3', '.', '.', '1' },
+         * { '7', '.', '.', '.', '2', '.', '.', '.', '6' },
+         * { '.', '6', '.', '.', '.', '.', '2', '8', '.' },
+         * { '.', '.', '.', '4', '1', '9', '.', '.', '5' },
+         * { '1', '.', '.', '.', '8', '.', '.', '7', '9' }, };
+         * System.out.println(s.isValidSudoku(board));
+         */
+
+        // Trapping Rain Water
+        int[] a = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+        System.out.println(s.trap(a));
     }
 
     // @Before

@@ -1,8 +1,5 @@
 package leetcode.plusOne;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * Problem: Plus One
  * Description: Given a number represented as an array of digits,

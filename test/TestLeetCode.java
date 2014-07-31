@@ -42,7 +42,19 @@ package com.hyace.test;
 
 //import leetcode.validSudoku.Solution;
 
-import leetcode.trappingRainWater.Solution;
+//import leetcode.trappingRainWater.Solution;
+
+//import leetcode.climbingStairs.Solution;
+
+import java.util.List;
+
+//import leetcode.grayCode.Solution;
+
+//import leetcode.plusOne.Solution;
+
+//import leetcode.rotateImage.Solution;
+
+import leetcode.setMatrixZeroes.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -175,8 +187,40 @@ public class TestLeetCode {
          */
 
         // Trapping Rain Water
-        int[] a = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-        System.out.println(s.trap(a));
+        // int[] a = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+        // System.out.println(s.trap(a));
+
+        // Climbing Stairs
+        // System.out.println(s.climbStairs(3));
+
+        // Gray Code
+        // List<Integer> res = s.grayCode(8);
+        // printArray(res);
+
+        // Plus One
+        // int[] d = { 1, 1, 1, 1, 2, 0, 9 };
+        // printArray(s.plusOne(d));
+
+        // Retate Image
+        // int[][] matrix = //{{1,2},{3,4}};
+        // {
+        // { 1, 2, 3 },
+        // { 4, 5, 6 },
+        // { 7, 8, 9 }
+        // };
+        // s.rotate(matrix);
+        // printMatrix(matrix);
+
+        // Set Matrix Zeroes
+        int[][] m = { { 0, 1 } };
+        s.setZeroes(m);
+        printMatrix(m);
+    }
+
+    private void printMatrix(int[][] matrix) {
+        int N = matrix.length;
+        for (int i = 0; i < N; i++)
+            printArray(matrix[i]);
     }
 
     // @Before
@@ -185,6 +229,13 @@ public class TestLeetCode {
     // str = br.readLine();
     // br.close();
     // }
+
+    private void printArray(Iterable<Integer> a) {
+        for (Integer i : a) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 
     private void printArray(int[] a) {
         for (int i : a) {

@@ -54,7 +54,15 @@ import java.util.List;
 
 //import leetcode.rotateImage.Solution;
 
-import leetcode.setMatrixZeroes.Solution;
+//import leetcode.setMatrixZeroes.Solution;
+
+//import leetcode.singleNumberII.Solution;
+
+//import leetcode.reverseLinkedListII.ListNode;
+//import leetcode.reverseLinkedListII.Solution;
+
+import leetcode.partitionList.ListNode;
+import leetcode.partitionList.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -212,9 +220,31 @@ public class TestLeetCode {
         // printMatrix(matrix);
 
         // Set Matrix Zeroes
-        int[][] m = { { 0, 1 } };
-        s.setZeroes(m);
-        printMatrix(m);
+        // int[][] m = { { 0, 1 } };
+        // s.setZeroes(m);
+        // printMatrix(m);
+
+        // SingleNumber II
+        // int[] a = { 1, 1, 1, 5, 5, 5, 7, 7, 7, 12, 12, 12, 6, 6, 6, 4 };
+        // System.out.println(s.singleNumber(a));
+
+        // Reverse Linked List II
+        // ListNode dummy = new ListNode(0), cur = dummy;
+        //
+        // for (int i = 0; i < 5; i++) {
+        // cur.next = new ListNode(i + 1);
+        // cur = cur.next;
+        // }
+        // printLinkedList(s.reverseBetween(dummy.next, 2, 4));
+
+        // Partition List
+        ListNode dummy = new ListNode(0), cur = dummy;
+
+        for (int i = 10; i > 0; i--) {
+            cur.next = new ListNode(i);
+            cur = cur.next;
+        }
+        printLinkedList(s.partition(dummy.next, 4));
     }
 
     private void printMatrix(int[][] matrix) {
@@ -240,6 +270,15 @@ public class TestLeetCode {
     private void printArray(int[] a) {
         for (int i : a) {
             System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    private void printLinkedList(ListNode r) {
+        while (r != null) {
+            System.out.print(r.val);
+            if (r.next != null) System.out.print("->");
+            r = r.next;
         }
         System.out.println();
     }

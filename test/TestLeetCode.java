@@ -64,7 +64,9 @@ import java.util.List;
 //import leetcode.partitionList.ListNode;
 //import leetcode.partitionList.Solution;
 
-import leetcode.removeDuplicatesfromSortedList.Solution;
+//import leetcode.removeDuplicatesfromSortedList.Solution;
+
+import leetcode.removeDuplicatesfromSortedListII.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -249,6 +251,30 @@ public class TestLeetCode {
         // printLinkedList(s.partition(dummy.next, 4));
 
         // Remove Duplicates from Sorted List
+        // ListNode dummy = new ListNode(0), cur = dummy;
+        // cur.next = new ListNode(1);
+        // cur = cur.next;
+        // cur.next = new ListNode(1);
+        // cur = cur.next;
+        // cur.next = new ListNode(1);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // cur = cur.next;
+        // cur.next = new ListNode(8);
+        // cur = cur.next;
+        // cur.next = new ListNode(8);
+        // cur = cur.next;
+        // cur.next = new ListNode(8);
+        // cur = cur.next;
+        // cur.next = new ListNode(10);
+        // cur = cur.next;
+        // cur.next = new ListNode(10);
+        // cur = cur.next;
+        // printLinkedList(s.deleteDuplicates(dummy));
+
+        // Remove Duplicates from Sorted List II
         ListNode dummy = new ListNode(0), cur = dummy;
         cur.next = new ListNode(1);
         cur = cur.next;
@@ -260,11 +286,15 @@ public class TestLeetCode {
         cur = cur.next;
         cur.next = new ListNode(5);
         cur = cur.next;
-        cur.next = new ListNode(8);
+        cur.next = new ListNode(6);
         cur = cur.next;
         cur.next = new ListNode(8);
         cur = cur.next;
         cur.next = new ListNode(8);
+        cur = cur.next;
+        cur.next = new ListNode(8);
+        cur = cur.next;
+        cur.next = new ListNode(9);
         cur = cur.next;
         cur.next = new ListNode(10);
         cur = cur.next;

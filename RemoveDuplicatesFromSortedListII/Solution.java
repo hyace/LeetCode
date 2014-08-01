@@ -33,6 +33,6 @@ public class Solution {
                 p = p.next;
             }
         }
-        return head;
+        return dummy.next;
     }
 }

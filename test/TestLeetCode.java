@@ -72,7 +72,9 @@ import java.util.List;
 
 //import leetcode.removeNthNodeFromEndofList.Solution;
 
-import leetcode.swapNodesinPairs.Solution;
+//import leetcode.swapNodesinPairs.Solution;
+
+import leetcode.reverseNodesinkGroup.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -332,6 +334,19 @@ public class TestLeetCode {
         // printLinkedList(s.removeNthFromEnd(dummy, 1));
 
         // Swap Nodes in Pairs
+        // ListNode dummy = new ListNode(1), cur = dummy;
+        // cur.next = new ListNode(2);
+        // cur = cur.next;
+        // cur.next = new ListNode(3);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // cur = cur.next;
+        // cur.next = new ListNode(6);
+        // printLinkedList(s.swapPairs(dummy));
+
+        // Reverse Nodes in k-Group
         ListNode dummy = new ListNode(1), cur = dummy;
         cur.next = new ListNode(2);
         cur = cur.next;
@@ -342,7 +357,7 @@ public class TestLeetCode {
         cur.next = new ListNode(5);
         cur = cur.next;
         cur.next = new ListNode(6);
-        printLinkedList(s.swapPairs(dummy));
+        printLinkedList(s.reverseKGroup(dummy, 4));
     }
 
     private void printMatrix(int[][] matrix) {

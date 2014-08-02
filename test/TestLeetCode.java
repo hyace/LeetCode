@@ -70,7 +70,9 @@ import java.util.List;
 
 //import leetcode.rotateList.Solution;
 
-import leetcode.removeNthNodeFromEndofList.Solution;
+//import leetcode.removeNthNodeFromEndofList.Solution;
+
+import leetcode.swapNodesinPairs.Solution;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -318,6 +320,18 @@ public class TestLeetCode {
         // printLinkedList(s.rotateRight(dummy, 2));
 
         // Remove Nth Node From End of List
+        // ListNode dummy = new ListNode(1), cur = dummy;
+        // cur.next = new ListNode(2);
+        // cur = cur.next;
+        // cur.next = new ListNode(3);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // printLinkedList(s.removeNthFromEnd(dummy, 0));
+        // printLinkedList(s.removeNthFromEnd(dummy, 1));
+
+        // Swap Nodes in Pairs
         ListNode dummy = new ListNode(1), cur = dummy;
         cur.next = new ListNode(2);
         cur = cur.next;
@@ -326,13 +340,9 @@ public class TestLeetCode {
         cur.next = new ListNode(4);
         cur = cur.next;
         cur.next = new ListNode(5);
-        printLinkedList(s.removeNthFromEnd(dummy, 0));
-        printLinkedList(s.removeNthFromEnd(dummy, 1));
-        printLinkedList(s.removeNthFromEnd(dummy, 1));
-        printLinkedList(s.removeNthFromEnd(dummy, 1));
-        printLinkedList(s.removeNthFromEnd(dummy, 1));
-        printLinkedList(s.removeNthFromEnd(dummy, 1));
-
+        cur = cur.next;
+        cur.next = new ListNode(6);
+        printLinkedList(s.swapPairs(dummy));
     }
 
     private void printMatrix(int[][] matrix) {

@@ -46,7 +46,7 @@ package com.hyace.test;
 
 //import leetcode.climbingStairs.Solution;
 
-import java.util.List;
+//import java.util.List;
 
 //import leetcode.grayCode.Solution;
 
@@ -74,9 +74,15 @@ import java.util.List;
 
 //import leetcode.swapNodesinPairs.Solution;
 
-import leetcode.reverseNodesinkGroup.Solution;
+//import leetcode.reverseNodesinkGroup.Solution;
 
-import org.junit.Before;
+//import leetcode.linkedListCycle.Solution;
+
+//import leetcode.linkedListCycleII.Solution;
+
+import leetcode.reorderList.Solution;
+
+//import org.junit.Before;
 import org.junit.Test;
 
 public class TestLeetCode {
@@ -347,6 +353,41 @@ public class TestLeetCode {
         // printLinkedList(s.swapPairs(dummy));
 
         // Reverse Nodes in k-Group
+        // ListNode dummy = new ListNode(1), cur = dummy;
+        // cur.next = new ListNode(2);
+        // cur = cur.next;
+        // cur.next = new ListNode(3);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // cur = cur.next;
+        // cur.next = new ListNode(6);
+        // printLinkedList(s.reverseKGroup(dummy, 4));
+
+        // Reverse Nodes in k-Group
+        // ListNode dummy = new ListNode(1), cur = dummy;
+        // cur.next = new ListNode(2);
+        // cur = cur.next;
+        // cur.next = new ListNode(3);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // cur = cur.next;
+        // cur.next = new ListNode(6);
+        // cur = cur.next;
+        // cur.next = new ListNode(7);
+        // cur = cur.next;
+        // ListNode ins = cur;
+        // cur.next = new ListNode(8);
+        // cur = cur.next;
+        // cur.next = new ListNode(9);
+        // cur = cur.next;
+        // cur.next = ins;
+        // System.out.println(s.detectCycle(dummy).val);
+
+        // Reverse Nodes in k-Group
         ListNode dummy = new ListNode(1), cur = dummy;
         cur.next = new ListNode(2);
         cur = cur.next;
@@ -357,7 +398,16 @@ public class TestLeetCode {
         cur.next = new ListNode(5);
         cur = cur.next;
         cur.next = new ListNode(6);
-        printLinkedList(s.reverseKGroup(dummy, 4));
+        cur = cur.next;
+        cur.next = new ListNode(7);
+        cur = cur.next;
+        cur.next = new ListNode(8);
+        cur = cur.next;
+        cur.next = new ListNode(9);
+        cur = cur.next;
+        cur.next = new ListNode(10);
+        s.reorderList(dummy);
+        printLinkedList(dummy);
     }
 
     private void printMatrix(int[][] matrix) {

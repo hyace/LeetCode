@@ -10,8 +10,21 @@ package leetcode.LRUCache;
  * When the cache reached its capacity, it should invalidate the least recently
  * used item before inserting a new item.
  * Date: Aug 4 , 2014
+ * 
  * @author Chyace
  * 
  */
-public class Solution {
+public class LRUCache {
+
+    public LRUCache(int capacity) {
+
+    }
+
+    public int get(int key) {
+        return 0;
+    }
+
+    public void set(int key, int value) {
+
+    }
 }

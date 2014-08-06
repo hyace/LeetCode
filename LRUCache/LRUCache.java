@@ -1,9 +1,7 @@
 package leetcode.LRUCache;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.ListIterator;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 
 /**
  * Problem: LRU Cache
@@ -20,53 +18,58 @@ import java.util.ListIterator;
  * 
  */
 public class LRUCache {
-    //
-    // public LRUCache(int capacity) {
-    //
-    // }
-    //
-    // public int get(int key) {
-    // return 0;
-    // }
-    //
-    // public void set(int key, int value) {
-    //
-    // }
-    HashMap<Integer, ListIterator<CacheNode>> cacheMap;
-    LinkedList<Integer> cacheList;
-    int capacity;
+// 用来装item的LinkedHashMap子类对象
+    CacheMap cache;
 
     public LRUCache(int capacity) {
-        this.capacity = capacity;
-        cacheMap = new HashMap<Integer, ListIterator<CacheNode>>();
-        cacheList = new LinkedList<Integer>();
+        cache = new CacheMap(capacity);
     }
-
+/**
+ * 每次get容器中的值，都将相应元素删除重新插入，这时它就会位于最新的位置
+ * @param key
+ * @return
+ */
     public int get(int key) {
-        return 0;
+        if (cache.containsKey(key)) {
+            int value = cache.get(key);
+            cache.remove(key);
+            set(key, value);
+            return value;
+        }
+        return -1;
     }
 
     public void set(int key, int value) {
-        if(cacheMap.containsKey(key)){
-            Iterator it = cacheMap.get(key);
+        if (cache.containsKey(key)) cache.remove(key);
+        cache.put(key, value);
+    }
+
+    public void show() {
+        for (Entry<Integer, Integer> item : cache.entrySet()) {
+            System.out.print(item + " ");
         }
-        else{
-            if(capacity==cacheList.size()){
-                cacheMap.remove(cacheList.getLast());
-                cacheList.removeLast();
-            }
-            cacheList.addFirst(value);
-            cacheMap.put(key, cacheList.listIterator(cacheList.size()));
-        }
+        System.out.println();
     }
 }
 
-class CacheNode {
-    int key;
-    int value;
+/**
+ * LinkedHashMap只能实现最旧移除而不会更新
+ * 
+ * @author Chyace
+ * 
+ */
+class CacheMap extends LinkedHashMap<Integer, Integer> {
 
-    CacheNode(int key, int value) {
-        this.key = key;
-        this.value = value;
+    private static final long serialVersionUID = 3240765461462956414L;
+
+    private int MAX;
+
+    CacheMap(int max) {
+        this.MAX = max;
     }
+
+    protected boolean removeEldestEntry(Entry<Integer, Integer> eldest) {
+        return size() > MAX;
+    }
+
 }

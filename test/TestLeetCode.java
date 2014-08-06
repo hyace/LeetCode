@@ -80,7 +80,11 @@ package com.hyace.test;
 
 //import leetcode.linkedListCycleII.Solution;
 
-import leetcode.reorderList.Solution;
+//import leetcode.reorderList.Solution;
+
+import java.util.Scanner;
+
+import leetcode.LRUCache.LRUCache;
 
 //import org.junit.Before;
 import org.junit.Test;
@@ -90,7 +94,8 @@ public class TestLeetCode {
 
     @Test
     public void test() {
-        Solution s = new Solution();
+        // Solution s = new Solution();
+        LRUCache cache = new LRUCache(5);
         // SimpleNumber
         // int[] a = { 2, 4, 2, 4, 1, 6, 1, 7, 7, 3, 3, 9, 9, 44, 44, 6, 11, 5,
         // 5 };
@@ -388,33 +393,48 @@ public class TestLeetCode {
         // System.out.println(s.detectCycle(dummy).val);
 
         // Reverse Nodes in k-Group
-        ListNode dummy = new ListNode(1), cur = dummy;
-        cur.next = new ListNode(2);
-        cur = cur.next;
-        cur.next = new ListNode(3);
-        cur = cur.next;
-        cur.next = new ListNode(4);
-        cur = cur.next;
-        cur.next = new ListNode(5);
-        cur = cur.next;
-        cur.next = new ListNode(6);
-        cur = cur.next;
-        cur.next = new ListNode(7);
-        cur = cur.next;
-        cur.next = new ListNode(8);
-        cur = cur.next;
-        cur.next = new ListNode(9);
-        cur = cur.next;
-        cur.next = new ListNode(10);
-        s.reorderList(dummy);
-        printLinkedList(dummy);
+        // ListNode dummy = new ListNode(1), cur = dummy;
+        // cur.next = new ListNode(2);
+        // cur = cur.next;
+        // cur.next = new ListNode(3);
+        // cur = cur.next;
+        // cur.next = new ListNode(4);
+        // cur = cur.next;
+        // cur.next = new ListNode(5);
+        // cur = cur.next;
+        // cur.next = new ListNode(6);
+        // cur = cur.next;
+        // cur.next = new ListNode(7);
+        // cur = cur.next;
+        // cur.next = new ListNode(8);
+        // cur = cur.next;
+        // cur.next = new ListNode(9);
+        // cur = cur.next;
+        // cur.next = new ListNode(10);
+        // s.reorderList(dummy);
+        // printLinkedList(dummy);
+
+        // LRUCache
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int key = sc.nextInt();
+            if (key == -1) break;
+            int value = sc.nextInt();
+            cache.set(key, value);
+            cache.show();
+            if ((key = sc.nextInt()) != -1) {
+                System.out.println(cache.get(key));
+                cache.show();
+            }
+        }
+        sc.close();
     }
 
-    private void printMatrix(int[][] matrix) {
-        int N = matrix.length;
-        for (int i = 0; i < N; i++)
-            printArray(matrix[i]);
-    }
+    // private void printMatrix(int[][] matrix) {
+    // int N = matrix.length;
+    // for (int i = 0; i < N; i++)
+    // printArray(matrix[i]);
+    // }
 
     // @Before
     // public void prePro() throws IOException {
@@ -423,26 +443,26 @@ public class TestLeetCode {
     // br.close();
     // }
 
-    private void printArray(Iterable<Integer> a) {
-        for (Integer i : a) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
-
-    private void printArray(int[] a) {
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
-
-    private void printLinkedList(ListNode r) {
-        while (r != null) {
-            System.out.print(r.val);
-            if (r.next != null) System.out.print("->");
-            r = r.next;
-        }
-        System.out.println();
-    }
+    // private void printArray(Iterable<Integer> a) {
+    // for (Integer i : a) {
+    // System.out.print(i + " ");
+    // }
+    // System.out.println();
+    // }
+    //
+    // private void printArray(int[] a) {
+    // for (int i : a) {
+    // System.out.print(i + " ");
+    // }
+    // System.out.println();
+    // }
+    //
+    // private void printLinkedList(ListNode r) {
+    // while (r != null) {
+    // System.out.print(r.val);
+    // if (r.next != null) System.out.print("->");
+    // r = r.next;
+    // }
+    // System.out.println();
+    // }
 }

@@ -36,7 +36,7 @@ public class Solution {
         return s.substring(L, R + 1);
     }
 
-    // 这个算法是从Annie Kim姐的第四种方法改的Java版，但是实际测试中，时间比上一种慢不少，而且空间占用还大，会造成内存耗尽。
+    // 这个算法是Manacher’s Algorithm的Java版，但是实际测试中，时间比上一种慢，而且空间占用还大，会造成内存耗尽。
     // 调整了虚拟机的Heap Size， 在处理27M的字符串时，上一种运行一秒，这种运行2.5秒。
     public String longestPalindromeII(String s) {
         int N = s.length();

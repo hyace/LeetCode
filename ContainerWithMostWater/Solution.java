@@ -22,14 +22,14 @@ public class Solution {
             int area = (right - left) * Math.min(height[left], height[right]);
             max = Math.max(max, area);
             if (height[left] <= height[right]) left++;
-            else right++;
+            else right--;
         }
         return max;
     }
 
     @Test
     public void test() {
-        int[] h = { 1, 2, 3, 4 };
+        int[] h = { 2, 1 };
         System.out.println(maxArea(h));
     }
 }

@@ -1,5 +1,6 @@
 package leetcode.largestRectangleInHistogram;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 import org.junit.Test;
@@ -18,10 +19,12 @@ public class Solution {
     public int largestRectangleArea(int[] height) {
         int N = height.length;
         if (N == 0) return 0;
+        height = Arrays.copyOf(height, N + 1);
         Stack<Integer> stack = new Stack<Integer>();
         int i = 0, res = 0;
-        while (i < N) {
-            if (stack.empty() || height[stack.peek()] <= height[i]) stack.push(i++);
+        while (i < N + 1) {
+            if (stack.empty() || height[stack.peek()] <= height[i]) stack
+                    .push(i++);
             else {
                 int index = stack.pop();
                 int width = stack.empty() ? i : i - stack.peek() - 1;

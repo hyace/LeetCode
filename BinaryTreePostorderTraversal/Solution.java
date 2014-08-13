@@ -22,16 +22,16 @@ import com.hyace.test.TreeNode;
  * 
  */
 public class Solution {
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         ArrayList<Integer> arr = new ArrayList<Integer>();
-        preorder(root, arr);
+        postorder(root, arr);
         return arr;
     }
 
-    private void preorder(TreeNode p, List<Integer> arr) {
+    private void postorder(TreeNode p, List<Integer> arr) {
         if (p == null) return;
-        preorder(p.left, arr);
-        preorder(p.right, arr);
+        postorder(p.left, arr);
+        postorder(p.right, arr);
         arr.add(p.val);
     }
 
@@ -50,7 +50,7 @@ public class Solution {
         t2.right = t5;
         t3.left = t6;
         t3.right = t7;
-        ArrayList<Integer> arr = (ArrayList<Integer>) preorderTraversal(t1);
+        ArrayList<Integer> arr = (ArrayList<Integer>) postorderTraversal(t1);
         for (Integer i : arr) {
             System.out.println(i);
         }

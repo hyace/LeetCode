@@ -25,24 +25,22 @@ public class Solution {
 
     public List<List<String>> partition(String s) {
         ArrayList<String> list = new ArrayList<String>();
-        add(s, 0, s.length(), list);
+        add(s, 0, list);
         return res;
     }
 
-    private void add(String s, int start, int end, List<String> list) {
-        if (valid(s.substring(start, end))) {
-            list.add(s.substring(start, end));
-            if (end == s.length()) {
-                res.add(list);
-                list.clear();
-            }
+    private void add(String s, int start, List<String> list) {
+        if (start == s.length()) {
+            res.add(new ArrayList<String>(list));
+            return;
         }
-        for (int i = start + 1; i < end; i++) {
-            String sub = s.substring(start, i);
+
+        for (int i = start; i < s.length(); i++) {
+            String sub = s.substring(start, i + 1);
             if (valid(sub)) {
-                ArrayList<String> t = new ArrayList<String>(list);
-                t.add(sub);
-                add(s, i, end, t);
+                list.add(sub);
+                add(s, i + 1, list);
+                list.remove(list.size() - 1);
             }
         }
     }

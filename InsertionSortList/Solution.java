@@ -3,7 +3,6 @@ package leetcode.insertionSortList;
 import org.junit.Test;
 
 import com.hyace.test.ListNode;
-import com.hyace.test.TestLeetCode;
 
 /**
  * Problem: Insertion Sort List
@@ -28,17 +27,19 @@ public class Solution {
         ListNode dummy = new ListNode(Integer.MIN_VALUE), p = dummy;
         dummy.next = head;
         ListNode q = p.next;
-        while (p != null && q != null) {
+        while (p != null || q != null) {
             if (p.val > q.val) {
                 insert(dummy, p, q);
-            } else p = p.next;
+                p = p.next;
+            }
             q = p.next;
+
         }
-        return dummy.next;
+        return null;
     }
 
     private void insert(ListNode dummy, ListNode end, ListNode ins) {
-        ListNode p = dummy;
+        ListNode p = dummy.next;
         while (p.next.val < ins.val)
             p = p.next;
         end.next = ins.next;
@@ -66,6 +67,6 @@ public class Solution {
         cur.next = new ListNode(2);
         cur = cur.next;
         cur.next = new ListNode(1);
-        TestLeetCode.printLinkedList(insertionSortList(head));
+        insertionSortList(head);
     }
 }

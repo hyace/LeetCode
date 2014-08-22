@@ -26,7 +26,7 @@ import com.hyace.test.TestLeetCode;
 public class Solution {
     public void sortColors(int[] A) {
         int left = 0, right = A.length - 1, p = left;
-        while (p < right) {
+        while (p <= right) {
             if (A[p] > 1) exch(A, p, right--);
             else if (A[p] < 1) exch(A, left++, p++);
             else p++;
@@ -42,7 +42,7 @@ public class Solution {
     @Test
     public void test() {
         // int[] a = { 1, 2, 0, 1, 2, 1, 0, 0, 2, 1, 2, 2, 0, 2, 1, 0, 1 };
-        int[] a = { 0, 0, 0, 0 };
+        int[] a = { 1, 0 };
         sortColors(a);
         TestLeetCode.printArray(a);
     }

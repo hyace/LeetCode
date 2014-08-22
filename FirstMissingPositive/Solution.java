@@ -24,7 +24,8 @@ public class Solution {
         int i = 0;
         int n = A.length;
         for (; i < n; i++) {
-            if (A[i] != i + 1 && A[i] > 0 && A[i] < n + 1) {
+            if (A[i] != i + 1 && A[i] > 0 && A[i] < n + 1
+                    && A[A[i] - 1] != A[i]) {
                 int t = A[i];
                 A[i] = A[t - 1];
                 A[t - 1] = t;
@@ -38,7 +39,8 @@ public class Solution {
 
     @Test
     public void test() {
-        int[] a = { 8, 3, 6, 2, 7, -1, 1, 5 };
+        int[] a = { 8, 3, 4, 2, 7, 4, 1, 5 };
+        // int[] a = { 1, 1 };
         System.out.println(firstMissingPositive(a));
     }
 }

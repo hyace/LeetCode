@@ -19,30 +19,43 @@ public class Solution {
     public int[] searchRange(int[] A, int target) {
         int left = 0, right = A.length - 1, mid = 0;
         int[] res = new int[2];
-        while (true) {
+        res[0] = res[1] = -1;
+        while (left <= right) {
             mid = (left + right) / 2;
             if (A[mid] < target) {
-                if (A[mid + 1] == target) break;
+                if (mid + 1 < A.length && A[mid + 1] == target) break;
                 left = mid + 1;
             } else right = mid - 1;
         }
-        res[0] = mid + 1;
+        if (A[mid] == target) res[0] = res[1] = mid;
+        else if (left > right) return res;
+        else res[0] = mid + 1;
         left = 0;
         right = A.length - 1;
-        while (true) {
+        while (left <= right) {
             mid = (left + right) / 2;
             if (A[mid] > target) {
-                if (A[mid - 1] == target) break;
+                if (mid > 0 && A[mid - 1] == target) break;
                 right = mid - 1;
             } else left = mid + 1;
         }
         res[1] = mid - 1;
+        if (A[mid] == target) res[1] = mid;
         return res;
     }
 
     @Test
     public void test() {
-        int[] a = { 5, 7, 7, 8, 8, 10 };
-        TestLeetCode.printArray(searchRange(a, 8));
+        // int[] a = { 5, 7, 7, 8, 8, 10 };
+        int[] a = { 4, 5, 5, 5, 5, 5, 5, 5, 6, 7, 8 };
+        TestLeetCode.printArray(searchRange(a, 5));
     }
 }
+
+/*
+ * Submission Result: Wrong Answer
+ * 
+ * Input: [1], 1
+ * Output: [-1,-1]
+ * Expected: [0,0]
+ */

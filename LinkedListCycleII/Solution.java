@@ -22,7 +22,7 @@ public class Solution {
      * @return
      */
     public ListNode detectCycle(ListNode head) {
-        if (head == null) return head;
+        if (head == null || head.next == null) return head;
         ListNode q = head, s = head;
         do {
             q = q.next.next;
@@ -39,6 +39,7 @@ public class Solution {
 
     @Test
     public void test() {
-
+        ListNode head = new ListNode(1);
+        System.out.println(detectCycle(head));
     }
 }

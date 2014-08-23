@@ -1,5 +1,7 @@
 package leetcode.linkedListCycleII;
 
+import org.junit.Test;
+
 import com.hyace.test.ListNode;
 
 /**
@@ -33,5 +35,10 @@ public class Solution {
             s = s.next;
         }
         return s;
+    }
+
+    @Test
+    public void test() {
+
     }
 }
